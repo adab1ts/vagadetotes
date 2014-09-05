@@ -13,7 +13,9 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'spring', group: :development
+
 gem 'unicorn'
+gem 'rack-timeout'
 
 # Used by Heroku to serve static assets such as images and stylesheets
 gem 'rails_12factor', group: :production
