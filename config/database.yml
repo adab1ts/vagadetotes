@@ -14,8 +14,4 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV['VAGADETOTES_DATABASE'] %>
-  username: <%= ENV['VAGADETOTES_USER'] %>
-  password: <%= ENV['VAGADETOTES_PASSWORD'] %>
-  host:     <%= ENV['VAGADETOTES_HOST'] %>
-  port:     <%= ENV['VAGADETOTES_PORT'] %>
+  url: <%= ENV['DATABASE_URL'] %>
