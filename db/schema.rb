@@ -11,9 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140907143501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "endorsements", force: true do |t|
+    t.string   "name"
+    t.string   "lastname"
+    t.string   "doctype"
+    t.string   "docid"
+    t.string   "email"
+    t.date     "birthdate"
+    t.string   "postal_code"
+    t.string   "activity"
+    t.boolean  "subscribed"
+    t.boolean  "hidden"
+    t.boolean  "featured"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "endorsements", ["docid"], name: "index_endorsements_on_docid", using: :btree
+  add_index "endorsements", ["email"], name: "index_endorsements_on_email", using: :btree
+  add_index "endorsements", ["lastname"], name: "index_endorsements_on_lastname", using: :btree
 
 end
