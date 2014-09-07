@@ -23,6 +23,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'will_paginate', '~> 3.0.7'
 gem 'bootstrap-will_paginate'
+gem 'simple_form', '~> 3.0.2'
 
 gem 'haml-rails', group: :development
 gem 'rspec-rails', '~> 3.1.0', group: [:development, :test]
