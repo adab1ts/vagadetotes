@@ -1,14 +1,7 @@
-%section#endorsements
-  %header
-    %h1 Endorsements
-  
-  .table-responsive
-    %table.table.table-condensed.table-striped
-      %tbody
-        - @endorsements.each do |e|
-          %tr
-            %td= "#{e.name} #{e.lastname}"
-            %td= e.activity
-  
-  %footer
-    = will_paginate
+%section.container{id: 'endorsement_form'}
+  = render 'endorsements/endorsement_form'
+
+%hr
+
+%section.container{id: 'endorsement_list'}
+  = render 'endorsements/endorsement_list'

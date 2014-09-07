@@ -1,0 +1,15 @@
+.row
+  .col-md-8
+    %header
+      %h1 Endorsements
+  
+    .table-responsive
+      %table.table.table-condensed.table-striped
+        %tbody
+          - @endorsements.each do |e|
+            %tr
+              %td= "#{e.name} #{e.lastname}"
+              %td= e.activity
+  
+    %footer
+      = will_paginate
