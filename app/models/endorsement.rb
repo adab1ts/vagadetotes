@@ -1,4 +1,7 @@
 class Endorsement < ActiveRecord::Base
+  # will_paginate entries per page
+  self.per_page = 50
+  
   default_scope { order(lastname: :asc) }
   scope :beginning_with, ->(letter) { where('lastname LIKE ?', "#{letter.upcase}%") }
   scope :subscribed,    -> { where(subscribed: true) }
