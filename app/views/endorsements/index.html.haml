@@ -1,7 +1,15 @@
-%section.container{id: 'endorsement_form'}
-  = render 'endorsements/endorsement_form'
+%section.container{id: 'petition_form'}
+  .row
+    %section.col-md-12{id: 'ribbon'}
+      %h1 Formulari d'adhesió
+      
+  %section.container{id: 'messages'}
+    = render 'endorsements/messages'
 
-%hr
+  %section.container{id: 'endorsement_form'}
+    = render 'endorsements/endorsement_form'
 
-%section.container{id: 'endorsement_list'}
-  = render 'endorsements/endorsement_list'
+  %hr
+
+  %section.container{id: 'endorsement_list'}
+    = render 'endorsements/endorsement_list'

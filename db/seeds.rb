@@ -17,7 +17,8 @@ endorsements = [
     activity: "Marketing",
     subscribed: true,
     hidden: false,
-    featured: true
+    featured: true,
+    approved: false
   },
   {
     name: "Carles",
@@ -30,7 +31,8 @@ endorsements = [
     activity: "ICT",
     subscribed: false,
     hidden: true,
-    featured: false
+    featured: false,
+    approved: false
   },
   {
     name: "Klaudia",
@@ -43,7 +45,8 @@ endorsements = [
     activity: "Arts",
     subscribed: false,
     hidden: false,
-    featured: true
+    featured: true,
+    approved: false
   }
 ]
 

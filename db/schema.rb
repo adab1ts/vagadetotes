@@ -28,12 +28,13 @@ ActiveRecord::Schema.define(version: 20140907143501) do
     t.boolean  "subscribed"
     t.boolean  "hidden"
     t.boolean  "featured"
+    t.boolean  "approved"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "endorsements", ["docid"], name: "index_endorsements_on_docid", using: :btree
-  add_index "endorsements", ["email"], name: "index_endorsements_on_email", using: :btree
+  add_index "endorsements", ["docid"], name: "index_endorsements_on_docid", unique: true, using: :btree
+  add_index "endorsements", ["email"], name: "index_endorsements_on_email", unique: true, using: :btree
   add_index "endorsements", ["lastname"], name: "index_endorsements_on_lastname", using: :btree
 
 end

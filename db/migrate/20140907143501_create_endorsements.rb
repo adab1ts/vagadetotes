@@ -12,11 +12,12 @@ class CreateEndorsements < ActiveRecord::Migration
       t.boolean :subscribed
       t.boolean :hidden
       t.boolean :featured
+      t.boolean :approved
 
       t.timestamps
     end
     add_index :endorsements, :lastname
-    add_index :endorsements, :docid
-    add_index :endorsements, :email
+    add_index :endorsements, :docid, unique: true
+    add_index :endorsements, :email, unique: true
   end
 end

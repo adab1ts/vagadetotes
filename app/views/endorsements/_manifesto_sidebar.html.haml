@@ -1,0 +1,13 @@
+%section#petition
+  = link_to endorsements_path do
+    %img{src: "#{asset_path('endorsement_form_link.png')}"}
+    
+%section#counter
+  %span.number= @endorsements_counter
+  %span.subtext persones adherides
+
+%section#twitter_feed
+  %span.feed_header Segueix-nos a Twitter
+  %a{class: 'twitter-timeline', href: 'https://twitter.com/hashtag/vagadetotes', 'data-widget-id' => '509684964632166400'} #vagadetotes
+  :javascript
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

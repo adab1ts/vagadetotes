@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :endorsements, only: [:index, :create]
+  get 'manifesto' => 'endorsements#manifesto'
   
-  root 'endorsements#index'
+  root 'endorsements#manifesto'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

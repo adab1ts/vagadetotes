@@ -1,3 +1,79 @@
 // Place all the styles related to the endorsements controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Application layout
+body {
+  font-family: 'Open-Sans', $font-family-base;  
+}
+
+section#ribbon {
+  height: 55px;
+  margin-bottom: 20px;
+  background-color: #CCCCCC;
+  text-align: center;
+  h1 {
+    font-size: 35px !important;
+    color: #663399 !important;
+    margin: 10px auto !important;
+  }
+}
+
+section#footer_ribbon {
+  margin-top: 25px;
+  height: 65px;
+  background-color: #CCCCCC;
+  text-align: center;
+  h1 {
+    font-size: 35px !important;
+    color: #663399 !important;
+    margin: 10px auto !important;
+  }
+}
+
+section#content {
+  h2 {
+    font-size: 22px !important;
+    line-height: 36px !important;
+  }
+  h3, p {
+    font-size: 14px !important;
+    line-height: 18px !important;
+  }
+  h3 {
+    font-weight: bold !important;
+  }
+}
+
+section#petition {
+  margin: 10px auto;
+  a {
+    text-decoration: none !important;
+    img {
+      display: block !important;
+    }
+  }
+}
+
+section#counter {
+  margin: 10px auto;
+  text-align: center;
+  span.number {
+    display: block !important;
+    font-family: 'Arial Black' !important;
+    font-size: 49px !important;
+  }
+  span.subtext {
+    display: block !important;
+    font-size: 17px !important;
+  }
+}
+
+section#twitter_feed {
+  margin: 70px auto 0;
+  text-align: center;
+  span.feed_header {
+    display: block !important;
+    font-size: 17px !important;
+  }
+}

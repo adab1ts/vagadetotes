@@ -9,12 +9,14 @@
     %title vagadetotes
 
   %body{role: 'application'}
-    %header{role: 'banner'}
+    %header#page_header{role: 'banner'}
+      = render 'layouts/header_content'
     
     %main{role: 'main'}
       = yield
     
-    %footer{role: 'contentinfo'}
+    %footer#page_footer{role: 'contentinfo'}
+      = render 'layouts/footer_content'
     
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     /[if lt IE 9]
