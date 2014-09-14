@@ -18,21 +18,30 @@ class EndorsementsController < ApplicationController
   def create
     @endorsement = Endorsement.new endorsement_params
 
-    respond_to do |format|
-      if @endorsement.save
-        format.html { redirect_to endorsements_url, notice: 'La teva signatura ha estat recollida. Gràcies pel teu suport.' }
-      else
-        @endorsements = Endorsement.visible.page "1"
-        flash.now[:error] = 'Alguna de les dades introduïdes no és correcta. Revisa-les i torna a provar.'
-        format.html { render :index }
-      end
+    if @endorsement.save
+      redirect_to endorsements_url, notice: 'La teva signatura ha estat recollida. Gràcies pel teu suport.'
+    else
+      @endorsements = Endorsement.visible.page "1"
+      flash.now[:error] = 'Alguna de les dades introduïdes no és correcta. Revisa-les i torna a provar.'
+      render :index
     end
   end
   
   private
   
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def endorsement_params
-      params.require(:endorsement).permit!
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def endorsement_params
+    params.require(:endorsement).permit(
+      :name,
+      :lastname,
+      :doctype,
+      :docid,
+      :email,
+      :birthdate,
+      :postal_code,
+      :activity,
+      :subscribed,
+      :hidden
+    )
+  end
 end
