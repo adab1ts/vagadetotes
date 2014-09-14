@@ -24,7 +24,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails', '~> 4.2.0'
 gem 'will_paginate', '~> 3.0.7'
 gem 'bootstrap-will_paginate'
-gem 'simple_form', '~> 3.0.2'
+gem 'simple_form', '~> 3.1.0.rc2', github: 'plataformatec/simple_form', branch: 'master'
 gem 'spanish_vat_validators', '~> 0.0.3'
 
 gem 'haml-rails', group: :development
