@@ -17,7 +17,7 @@ class Endorsement < ActiveRecord::Base
     e.docid       = e.docid.squish.upcase
     e.email       = e.email.squish.downcase
     e.postal_code = e.postal_code.squish
-    e.activity    = e.activity.squish.downcase.titleize
+    e.activity    = e.activity.squish.downcase.capitalize
   end
   
   validates :name, presence: true, length: { maximum: 25 }, format: { with: /\A(\p{L}+\s?)+\z/i }
