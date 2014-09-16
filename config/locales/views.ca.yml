@@ -1,0 +1,24 @@
+ca:
+  endorsements:
+    manifesto_sidebar:
+      img_button:
+        alt: 'signa aquí'
+      counter:
+        subtext: 'persones adherides'
+      twitter_feed:
+        header_text: 'Segueix-nos a Twitter'
+    endorsement_sidebar:
+      img_button:
+        alt: 'torna al manifest'
+      counter:
+        subtext: 'persones adherides'
+      twitter_feed:
+        header_text: 'Segueix-nos a Twitter'
+    endorsement_form:
+      title: "Formulari d'adhesió"
+      subscribe_text: 'Vull rebre informació sobre la Vaga de totes.'
+      hide_text: 'No vull que el meu nom aparegui públicament a la web.'
+      submit:
+        img_alt: 'Signa'
+    endorsement_list:
+      title: "Llista pública d'adhesions"

@@ -1,0 +1,15 @@
+ca:
+  activerecord:
+    models:
+      endorsement:
+        one: 'Adhesió'
+        other: 'Adhesions'
+    attributes:
+      endorsement:
+        name: 'Nom'
+        lastname: 'Cognoms'
+        doctype: 'Identificador'
+        email: 'Correu electrònic'
+        birthdate: 'Data de naixement'
+        postal_code: 'Codi postal'
+        activity: 'Activitat'

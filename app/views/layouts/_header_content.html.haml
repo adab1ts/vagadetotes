@@ -1,8 +1,8 @@
 .container
   .row
     .col-md-10.col-md-offset-1.banner
-      %img{src: "#{asset_path('vagadetotes_banner.png')}", alt: 'vagadetotes_banner'}
+      %img{src: "#{asset_path('vagadetotes_banner.png')}", alt: t('.header.banner.img_alt')}
 
   .row
     .col-md-12.ribbon
-      %h1 Manifest de la #vagadetotes
+      %h1= t('.header.ribbon.text')

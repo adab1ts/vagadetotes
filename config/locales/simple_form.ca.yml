@@ -1,0 +1,30 @@
+ca:
+  simple_form:
+    "yes": 'Sí'
+    "no": 'No'
+    required:
+      text: 'obligatori'
+      mark: '*'
+    error_notification:
+      default_message: "Revisa les dades incorrectes:"
+    labels:
+      endorsement:
+        name: 'Nom'
+        lastname: 'Cognoms'
+        doctype: 'Identificador'
+        email: 'Correu electrònic'
+        birthdate: 'Data de naixement'
+        postal_code: 'Codi postal'
+        activity: 'Activitat'
+    placeholders:
+      endorsement:
+        docid: 'ex: 12345678Z'
+    prompts:
+      endorsement:
+        doctype: 'document'
+    options:
+      endorsement:
+        doctype:
+          dni: 'DNI'
+          nie: 'NIE'
+          passport: 'Passaport'

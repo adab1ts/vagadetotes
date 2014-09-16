@@ -1,13 +1,13 @@
 #goto_manifesto
   = link_to manifesto_path do
-    %img{src: "#{asset_path('manifesto_link.png')}", alt: "torna al manifest"}
+    %img{src: "#{asset_path('manifesto_link.png')}", alt: t('.img_button.alt')}
     
 #counter
   %span.number= @endorsements_counter
-  %span.subtext persones adherides
+  %span.subtext= t('.counter.subtext')
 
 #twitter_feed
-  %span.feed_header Segueix-nos a Twitter
+  %span.feed_header= t('.twitter_feed.header_text')
   %a{class: 'twitter-timeline', href: 'https://twitter.com/hashtag/vagadetotes', 'data-widget-id' => '509684964632166400'} #vagadetotes
   :javascript
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

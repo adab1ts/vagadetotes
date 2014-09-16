@@ -106,6 +106,12 @@ body {
   }
 }
 
+#endorsement_list {
+  .pagination {
+    margin-top: 0 !important;
+  }
+}
+
 .simple_form {
   .endorsement_doctype, .endorsement_birthdate {
     select {
