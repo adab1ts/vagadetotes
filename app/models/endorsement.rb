@@ -12,7 +12,7 @@ class Endorsement < ActiveRecord::Base
   
   before_validation do |e|
     e.name        = e.name.squish.downcase.titleize
-    e.lastname    = e.lastname.squish.downcase.titleize
+    e.lastname    = e.lastname.squish.downcase.scan(/\w+/).map{ |w| %w(i y de la los).include?(w) ? w : w.capitalize }.join(' ')
     e.doctype     = e.doctype.squish.downcase
     e.docid       = e.docid.squish.upcase
     e.email       = e.email.squish.downcase
