@@ -7,7 +7,14 @@ body {
   font-family: 'Open-Sans', $font-family-base;  
 }
 
-section#ribbon {
+.banner {
+  img {
+    display: block !important;
+    margin: auto !important;
+  }
+}
+
+.ribbon {
   height: 55px;
   margin-bottom: 20px;
   background-color: #CCCCCC;
@@ -15,23 +22,23 @@ section#ribbon {
   h1 {
     font-size: 35px !important;
     color: #663399 !important;
-    margin: 10px auto !important;
+    margin-top: 10px !important;
   }
 }
 
-section#footer_ribbon {
-  margin-top: 25px;
+.footer_ribbon {
   height: 65px;
+  margin-top: 25px;
   background-color: #CCCCCC;
   text-align: center;
   h1 {
     font-size: 35px !important;
     color: #663399 !important;
-    margin: 10px auto !important;
+    margin-top: 10px !important;
   }
 }
 
-section#content {
+#content {
   h2 {
     font-size: 22px !important;
     line-height: 36px !important;
@@ -45,18 +52,19 @@ section#content {
   }
 }
 
-section#petition {
-  margin: 10px auto;
+#goto_endorsement, #goto_manifesto {
+  margin-top: 20px;
   a {
     text-decoration: none !important;
     img {
       display: block !important;
+      margin: auto !important;
     }
   }
 }
 
-section#counter {
-  margin: 10px auto;
+#counter {
+  margin-top: 25px;
   text-align: center;
   span.number {
     display: block !important;
@@ -65,15 +73,52 @@ section#counter {
   }
   span.subtext {
     display: block !important;
+    margin-top: -10px !important;
     font-size: 17px !important;
   }
 }
 
-section#twitter_feed {
-  margin: 70px auto 0;
+#twitter_feed {
+  margin-top: 70px;
   text-align: center;
   span.feed_header {
     display: block !important;
     font-size: 17px !important;
+  }
+}
+
+#endorsement_form, #endorsement_list {
+  header {
+    margin: 20px auto;
+    h1 {
+      font-size: 24px;
+      color: #663399;
+      margin: 0;
+    }
+  }
+}
+
+#endorsement_form {
+  .panel {
+    padding: 25px;
+    background-color: #cc99ff;
+    border-radius: 40px;
+  }
+}
+
+.simple_form {
+  .endorsement_doctype, .endorsement_birthdate {
+    select {
+      width: 125px !important;
+    }
+  }
+  .endorsement_docid, .endorsement_postal_code {
+    input {
+      width: 125px !important;
+    }
+  }
+  input[type='image'] {
+    display: block !important;
+    margin: auto !important;
   }
 }

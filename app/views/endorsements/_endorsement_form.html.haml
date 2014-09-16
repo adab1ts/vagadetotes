@@ -1,62 +1,31 @@
-.row
-  .col-md-8
-    = form_for @endorsement, html: {class: 'form-horizontal', role: 'form'} do |f|
-      .form-group
-        = f.label :name, 'Nom *', class: 'col-sm-3 control-label'
-        .col-sm-4
-          = f.text_field :name, maxlength: 25, class: 'form-control', autofocus: true, required: true
+%header
+  %h1 Formulari d'adhesió
+
+.panel.panel-default
+  .panel-body
+    = simple_form_for @endorsement, html: {class: 'form-horizontal'}, wrapper: :horizontal_form,
+wrapper_mappings: {boolean: :horizontal_boolean} do |f|
+      -#= f.error_notification
       
-      .form-group
-        = f.label :lastname, 'Cognoms *', class: 'col-sm-3 control-label'
-        .col-sm-4
-          = f.text_field :lastname, maxlength: 25, class: 'form-control', required: true
+      = f.input :name, input_html: {maxlength: 25}, autofocus: true
+      = f.input :lastname, input_html: {maxlength: 25}
+      = f.input :doctype, collection: [['DNI', 'dni'], ['NIE', 'nie'], ['Passaport', 'passport']], prompt: '-document-'
+      = f.input :docid, label_html: {class: 'sr-only'}, input_html: {maxlength: 25}, placeholder: '12345678Z'
+      = f.input :email, input_html: {maxlength: 25}
+      = f.input :birthdate, start_year: Date.today.year - 15, end_year: 1900, order: [:day, :month, :year], prompt: {day: '-dia-', month: '-mes-', year: '-any-'}, use_month_names: %w(Gener Febrer Març Abril Maig Juny Juliol Agost Setembre Octubre Novembre Desembre)
+      = f.input :postal_code, input_html: {maxlength: 5}      
+      = f.input :activity, input_html: {maxlength: 25}      
       
-      .form-group
-        = f.label :doctype, 'Identificació *', class: 'col-sm-3 control-label'
-        .col-sm-5
-          = f.select :doctype, [['DNI', 'dni'], ['NIE', 'nie'], ['Passaport', 'passport']], class: 'select', required: true
-          = f.text_field :docid, maxlength: 25, class: 'form-control', required: true
-      
-      .form-group
-        = f.label :email, 'Correu electrònic *', class: 'col-sm-3 control-label'
-        .col-sm-4
-          = f.email_field :email, maxlength: 25, class: 'form-control', required: true
-      
-      .form-group
-        = f.label :birthdate, 'Data de naixement *', class: 'col-sm-3 control-label'
-        .col-sm-8
-          = f.date_select :birthdate, start_year: Date.today.year - 15, end_year: 1900, order: [:day, :month, :year], prompt: {day: '-dia-', month: '-mes-', year: '-any-'}, use_month_names: %w(Gener Febrer Març Abril Maig Juny Juliol Agost Setembre Octubre Novembre Desembre), with_css_classes: true
-      
-      .form-group
-        = f.label :postal_code, 'Codi postal *', class: 'col-sm-3 control-label'
-        .col-sm-4
-          = f.text_field :postal_code, maxlength: 5, class: 'form-control', required: true
-      
-      .form-group
-        = f.label :activity, 'Activitat', class: 'col-sm-3 control-label'
-        .col-sm-4
-          = f.text_field :activity, maxlength: 25, class: 'form-control'
+      %hr
+     
+      = f.input :subscribed, inline_label: 'Vull rebre informació sobre la Vaga de totes.'
+      = f.input :hidden, inline_label: 'No vull que el meu nom aparegui públicament a la web.'
       
       %hr
       
-      .form-group
-        .col-sm-offset-3.col-sm-5
-          .chefbox
-            %label
-              = f.check_box :subscribed
-              Vols rebre informació sobre la Vaga de totes?
-        .col-sm-offset-3.col-sm-5
-          .chefbox
-            %label
-              = f.check_box :hidden
-              No vull que el meu nom aparegui públicament a la web.
+      %p Signant el manifest dono el meu consentiment perquè les meves dades personals siguin incorporades a un fitxer gestionat pel col·lectiu Vagadetotes per tal de poder realitzar totes les gestions necessàries pel manteniment de la meva condició d'adherit/da a aquest manifest. No cedirem les teves dades a tercers. Podeu revocar en qualsevol moment el consentiment donat i exercitar els vostres drets d’accés, rectificació, cancel·lació i oposició adreçant-vos al correu electrònic vagadetotes@gmail.com.
       
       %hr
-      
-      %p Clicant el botó ‘SIGNAR’ dono el meu consentiment perquè les meves dades personals siguin incorporades a un fitxer gestionat pel col·lectiu Vagadetotes per tal de poder realitzar totes les gestions necessàries pel manteniment de la meva condició d'adherit/da a aquest manifest. No cedirem les teves dades a tercers. Podeu revocar en qualsevol moment el consentiment donat i exercitar els vostres drets d’accés, rectificació, cancel·lació i oposició adreçant-vos al correu electrònic vagadetotes@gmail.com.
-      
-      %hr
-      
-      .form-group
-        .col-sm-offset-3.col-sm-5
-          = f.submit 'SIGNAR', class: 'btn btn-primary'
+  
+      -#= f.button :submit, 'SIGNAR'
+      = image_submit_tag 'endorsement_form_submit.png', alt: 'Signar'

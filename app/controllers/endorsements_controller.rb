@@ -12,6 +12,7 @@ class EndorsementsController < ApplicationController
   def index
     @endorsement  = Endorsement.new
     @endorsements = Endorsement.visible.page params[:page]
+    @endorsements_counter = Endorsement.count
   end
 
   # POST /endorsements

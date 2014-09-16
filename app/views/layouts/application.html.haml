@@ -9,13 +9,13 @@
     %title vagadetotes
 
   %body{role: 'application'}
-    %header#page_header{role: 'banner'}
+    %header{role: 'banner'}
       = render 'layouts/header_content'
     
     %main{role: 'main'}
       = yield
     
-    %footer#page_footer{role: 'contentinfo'}
+    %footer{role: 'contentinfo'}
       = render 'layouts/footer_content'
     
     = javascript_include_tag 'application', 'data-turbolinks-track' => true

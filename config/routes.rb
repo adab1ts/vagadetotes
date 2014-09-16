@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :endorsements, only: [:index, :create]
-  get 'manifesto' => 'endorsements#manifesto'
+  get 'manifesto' => 'endorsements#manifesto', as: :manifesto
   
   root 'endorsements#manifesto'
 

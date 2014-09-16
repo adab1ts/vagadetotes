@@ -1,15 +1,13 @@
-.row
-  .col-md-8
-    - flash.each do |name, msg|
-      - if name == 'notice'
-        - klass = 'success'
-      - elsif name == 'info'
-        - klass = 'info'
-      - else
-        - klass = 'danger'
+- flash.each do |name, msg|
+  - if name == 'notice'
+    - klass = 'success'
+  - elsif name == 'info'
+    - klass = 'info'
+  - else
+    - klass = 'danger'
     
-      %div{class: "alert alert-#{klass} alert-dismissable", role: 'alert'}
-        %button{type: 'button', class: 'close', 'data-dismiss' => 'alert'}
-          %span{'aria-hidden' => true} &times;
-          %span{class: 'sr-only'} Close
-        = msg
+  %div{class: "alert alert-#{klass} alert-dismissable", role: 'alert'}
+    %button{type: 'button', class: 'close', 'data-dismiss' => 'alert'}
+      %span{'aria-hidden' => true} &times;
+      %span{class: 'sr-only'} Close
+    = msg

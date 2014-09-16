@@ -1,15 +1,7 @@
-%section.container{id: 'petition_form'}
+%section.container{id: 'endorsement'}
   .row
-    %section.col-md-12{id: 'ribbon'}
-      %h1 Formulari d'adhesió
+    %section.col-md-9{id: 'content'}
+      = render 'endorsements/endorsement_content'
       
-  %section.container{id: 'messages'}
-    = render 'endorsements/messages'
-
-  %section.container{id: 'endorsement_form'}
-    = render 'endorsements/endorsement_form'
-
-  %hr
-
-  %section.container{id: 'endorsement_list'}
-    = render 'endorsements/endorsement_list'
+    %section.col-md-3{id: 'sidebar'}
+      = render 'endorsements/endorsement_sidebar'

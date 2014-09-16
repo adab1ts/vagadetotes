@@ -1,15 +1,14 @@
-.row
-  .col-md-8
-    %header
-      %h1 Llista d'adherits
+%header
+  %h1 Llista pública d'adhesions
+
+.panel.panel-default
+  .table-responsive
+    %table.table.table-condensed.table-striped
+      %tbody
+        - @endorsements.each do |e|
+          %tr
+            %td= "#{e.name} #{e.lastname}"
+            %td= e.activity
   
-    .table-responsive
-      %table.table.table-condensed.table-striped
-        %tbody
-          - @endorsements.each do |e|
-            %tr
-              %td= "#{e.name} #{e.lastname}"
-              %td= e.activity
-  
-    %footer
-      = will_paginate
+%footer
+  = will_paginate
