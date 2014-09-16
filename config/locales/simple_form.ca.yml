@@ -16,6 +16,9 @@ ca:
         birthdate: 'Data de naixement'
         postal_code: 'Codi postal'
         activity: 'Activitat'
+    hints:
+      endorsement:
+        docid: 'Aquest camp restarà ocult.'
     placeholders:
       endorsement:
         docid: 'ex: 12345678Z'

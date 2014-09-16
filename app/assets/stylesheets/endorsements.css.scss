@@ -7,6 +7,10 @@ body {
   font-family: 'Open-Sans', $font-family-base;  
 }
 
+a, a:hover {
+  text-decoration: none !important;
+}
+
 .banner {
   img {
     display: block !important;
@@ -31,10 +35,11 @@ body {
   margin-top: 25px;
   background-color: #CCCCCC;
   text-align: center;
-  h1 {
+  a {
+    display: block;
     font-size: 35px !important;
     color: #663399 !important;
-    margin-top: 10px !important;
+    margin-top: 5px !important;
   }
 }
 

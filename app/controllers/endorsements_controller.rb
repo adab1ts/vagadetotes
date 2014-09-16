@@ -20,11 +20,11 @@ class EndorsementsController < ApplicationController
     @endorsement = Endorsement.new endorsement_params
 
     if @endorsement.save
-      redirect_to endorsements_url, notice: 'La teva signatura ha estat recollida. Gràcies pel teu suport.'
+      redirect_to endorsements_url, notice: t('endorsements.valid_endorsement')
     else
       @endorsements = Endorsement.visible.page "1"
       @endorsements_counter = Endorsement.count
-      flash.now[:error] = 'Alguna de les dades introduïdes no és correcta. Revisa-les i torna a provar.'
+      flash.now[:error] = t('endorsements.invalid_endorsement')
       render :index
     end
   end

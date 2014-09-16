@@ -28,7 +28,7 @@ class Endorsement < ActiveRecord::Base
   validates :email, presence: true, uniqueness: { case_sensitive: false }, length: { maximum: 50 }, format: { with: /\A([\w\.\+\-]+)@([-\w]+\.)([\w]{2,})\z/i }
   validates :birthdate, presence: true
   validates :postal_code, presence: true, format: { with: /\A([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}\z/ }
-  validates :activity, length: { maximum: 50 }, format: { with: /\A(\p{L}+\s?)*\z/i }
+  validates :activity, length: { maximum: 50 }, format: { with: /\A(\p{L}+,?\s?)*\z/i }
   
   before_save do |e|
     e.activity = nil if e.activity.blank?
