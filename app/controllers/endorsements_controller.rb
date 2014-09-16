@@ -23,6 +23,7 @@ class EndorsementsController < ApplicationController
       redirect_to endorsements_url, notice: 'La teva signatura ha estat recollida. Gràcies pel teu suport.'
     else
       @endorsements = Endorsement.visible.page "1"
+      @endorsements_counter = Endorsement.count
       flash.now[:error] = 'Alguna de les dades introduïdes no és correcta. Revisa-les i torna a provar.'
       render :index
     end
