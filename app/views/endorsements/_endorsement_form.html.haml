@@ -7,13 +7,13 @@
 wrapper_mappings: {boolean: :horizontal_boolean} do |f|
       
       = f.input :name, input_html: {maxlength: 25}, autofocus: true
-      = f.input :lastname, input_html: {maxlength: 25}
+      = f.input :lastname, input_html: {maxlength: 50}
       = f.input :doctype, collection: [:dni, :nie, :passport], prompt: :translate
       = f.input :docid, label_html: {class: 'sr-only'}, input_html: {maxlength: 25}, placeholders: :translate
-      = f.input :email, input_html: {maxlength: 25}
+      = f.input :email, input_html: {maxlength: 50}
       = f.input :birthdate, start_year: Date.today.year - 15, end_year: 1900, prompt: :translate
       = f.input :postal_code, input_html: {maxlength: 5}      
-      = f.input :activity, input_html: {maxlength: 25}      
+      = f.input :activity, input_html: {maxlength: 50}      
       
       %hr
      

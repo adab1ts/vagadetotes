@@ -21,14 +21,14 @@ class Endorsement < ActiveRecord::Base
   end
   
   validates :name, presence: true, length: { maximum: 25 }, format: { with: /\A(\p{L}+\s?)+\z/i }
-  validates :lastname, presence: true, length: { maximum: 25 }, format: { with: /\A(\p{L}+\s?)+\z/i }
+  validates :lastname, presence: true, length: { maximum: 50 }, format: { with: /\A(\p{L}+\s?)+\z/i }
   validates :doctype, presence: true, inclusion: { in: %w(dni nie passport) }
   validates :docid, presence: true, uniqueness: { case_sensitive: false }
   validates :docid, valid_spanish_id: true, unless: ->(e) { %w(dni nie).include? e.doctype }
-  validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A([\w\.\+\-]+)@([-\w]+\.)([\w]{2,})\z/i }
+  validates :email, presence: true, uniqueness: { case_sensitive: false }, length: { maximum: 50 }, format: { with: /\A([\w\.\+\-]+)@([-\w]+\.)([\w]{2,})\z/i }
   validates :birthdate, presence: true
   validates :postal_code, presence: true, format: { with: /\A([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}\z/ }
-  validates :activity, length: { maximum: 25 }, format: { with: /\A(\p{L}+\s?)*\z/i }
+  validates :activity, length: { maximum: 50 }, format: { with: /\A(\p{L}+\s?)*\z/i }
   
   before_save do |e|
     e.activity = nil if e.activity.blank?
