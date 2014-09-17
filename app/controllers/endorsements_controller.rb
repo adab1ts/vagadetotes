@@ -43,7 +43,8 @@ class EndorsementsController < ApplicationController
       :postal_code,
       :activity,
       :subscribed,
-      :hidden
+      :hidden,
+      :group
     )
   end
 end

@@ -10,10 +10,10 @@ ca:
     labels:
       endorsement:
         name: 'Nom'
-        lastname: 'Cognoms'
-        doctype: 'Identificador'
+        lastname: '* Cognoms'
+        doctype: '* Identificador'
         email: 'Correu electrònic'
-        birthdate: 'Data de naixement'
+        birthdate: '* Data de naixement'
         postal_code: 'Codi postal'
         activity: 'Activitat'
     hints:

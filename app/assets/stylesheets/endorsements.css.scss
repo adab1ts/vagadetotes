@@ -43,6 +43,7 @@ a, a:hover {
   }
 }
 
+// Content
 #content {
   h2 {
     font-size: 22px !important;
@@ -57,6 +58,7 @@ a, a:hover {
   }
 }
 
+// Sidebar
 #goto_endorsement, #goto_manifesto {
   margin-top: 20px;
   a {
@@ -71,15 +73,17 @@ a, a:hover {
 #counter {
   margin-top: 25px;
   text-align: center;
+  font-family: 'Roboto Condensed', sans-serif !important;
   span.number {
     display: block !important;
-    font-family: 'Arial Black' !important;
-    font-size: 49px !important;
+    font-weight: 700;
+    font-size: $font-size-base * 5 !important;
   }
   span.subtext {
     display: block !important;
     margin-top: -10px !important;
-    font-size: 17px !important;
+    font-weight: 400;
+    font-size: $font-size-base * 2 !important;
   }
 }
 
@@ -92,6 +96,7 @@ a, a:hover {
   }
 }
 
+// Endorsement Form
 #endorsement_form, #endorsement_list {
   header {
     margin: 20px auto;
@@ -104,6 +109,9 @@ a, a:hover {
 }
 
 #endorsement_form {
+  .tab-content {
+    margin-top: 10px;
+  }
   .panel {
     padding: 25px;
     background-color: #cc99ff;

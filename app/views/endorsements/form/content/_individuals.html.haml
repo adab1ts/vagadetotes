@@ -1,10 +1,9 @@
-%header
-  %h1= t('.title')
-
 .panel.panel-default
   .panel-body
     = simple_form_for @endorsement, html: {class: 'form-horizontal'}, wrapper: :horizontal_form,
 wrapper_mappings: {boolean: :horizontal_boolean} do |f|
+      
+      = f.input :group, as: :hidden, input_html: {value: '0'}
       
       = f.input :name, input_html: {maxlength: 25}, autofocus: true
       = f.input :lastname, input_html: {maxlength: 50}
@@ -22,7 +21,7 @@ wrapper_mappings: {boolean: :horizontal_boolean} do |f|
       
       %hr
       
-      %p Signant el manifest dono el meu consentiment perquè les meves dades personals siguin incorporades a un fitxer gestionat pel col·lectiu Vagadetotes per tal de poder realitzar totes les gestions necessàries pel manteniment de la meva condició d'adherit/da a aquest manifest. No cedirem les teves dades a tercers. Podeu revocar en qualsevol moment el consentiment donat i exercitar els vostres drets d’accés, rectificació, cancel·lació i oposició adreçant-vos al correu electrònic vagadetotes@gmail.com.
+      = render 'endorsements/form/content/legal_notice'
       
       %hr
   

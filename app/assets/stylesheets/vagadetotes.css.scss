@@ -1,7 +1,11 @@
 // Fonts
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
 
 // Twitter Bootstrap
+$brand-primary: #663399;
+$nav-pills-border-radius: 15px;
+
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
 }

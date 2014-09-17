@@ -1,0 +1,14 @@
+- gactive, iactive = @endorsement.group ? ['active', 'none'] : ['none', 'active']
+%header
+  %h1= t('.title')
+
+#forms
+  %ul.nav.nav-pills
+    %li{class: "#{iactive}"}= link_to t('.individuals'), '#individuals', role: 'tab', data: {toggle: 'tab'}
+    %li{class: "#{gactive}"}= link_to t('.groups'), '#groups', role: 'tab', data: {toggle: 'tab'}
+
+  .tab-content
+    #individuals{class: "tab-pane #{iactive}"}
+      = render 'endorsements/form/content/individuals'
+    #groups{class: "tab-pane #{gactive}"}
+      = render 'endorsements/form/content/groups'

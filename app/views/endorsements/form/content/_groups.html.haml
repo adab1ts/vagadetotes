@@ -1,0 +1,24 @@
+.panel.panel-default
+  .panel-body
+    = simple_form_for @endorsement, html: {class: 'form-horizontal'}, wrapper: :horizontal_form,
+wrapper_mappings: {boolean: :horizontal_boolean} do |f|
+
+      = f.input :group, as: :hidden, input_html: {value: '1'}
+      
+      = f.input :name, input_html: {maxlength: 50}, autofocus: true
+      = f.input :email, input_html: {maxlength: 50}
+      = f.input :postal_code, input_html: {maxlength: 5}      
+      = f.input :activity, input_html: {maxlength: 50}, hint: t('.activity_hint')
+      
+      %hr
+     
+      = f.input :subscribed, inline_label: t('.subscribe_text')
+      = f.input :hidden, inline_label: t('.hide_text')
+      
+      %hr
+
+      = render 'endorsements/form/content/legal_notice'
+      
+      %hr
+  
+      = image_submit_tag 'endorsement_form_submit.png', alt: t('.submit.img_alt')

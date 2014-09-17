@@ -1,24 +1,36 @@
 ca:
   endorsements:
-    manifesto_sidebar:
-      img_button:
-        alt: 'signa aquí'
-      counter:
-        subtext: 'persones adherides'
-      twitter_feed:
-        header_text: 'Segueix-nos a Twitter'
-    endorsement_sidebar:
-      img_button:
-        alt: 'torna al manifest'
-      counter:
-        subtext: 'persones adherides'
-      twitter_feed:
-        header_text: 'Segueix-nos a Twitter'
-    endorsement_form:
-      title: "Formulari d'adhesió"
-      subscribe_text: 'Vull rebre informació sobre la Vaga de totes.'
-      hide_text: 'No vull que el meu nom aparegui públicament a la web.'
-      submit:
-        img_alt: 'Signa'
-    endorsement_list:
-      title: "Llista pública d'adhesions"
+    manifesto:
+      sidebar:
+        img_button:
+          alt: 'signa aquí'
+        counter:
+          subtext: 'adhesions'
+        twitter_feed:
+          header_text: 'Segueix-nos a Twitter'
+    form:
+      sidebar:
+        img_button:
+          alt: 'torna al manifest'
+        counter:
+          subtext: 'adhesions'
+        twitter_feed:
+          header_text: 'Segueix-nos a Twitter'
+      content:
+        forms:
+          title: "Formulari d'adhesió"
+          individuals: 'Persones'
+          groups: 'Col·lectius'
+        individuals:
+          subscribe_text: 'Vull rebre informació sobre la Vaga de totes.'
+          hide_text: 'No vull que el meu nom aparegui públicament a la web.'
+          submit:
+            img_alt: 'Signa'
+        groups:
+          activity_hint: 'ex: Sanitat, Lleure, Deute, etc.'
+          subscribe_text: 'Vull rebre informació sobre la Vaga de totes.'
+          hide_text: 'No vull que el meu nom aparegui públicament a la web.'
+          submit:
+            img_alt: 'Signa'
+        list:
+          title: "Llista pública d'adhesions"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140907143501) do
+ActiveRecord::Schema.define(version: 20140917113536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140907143501) do
     t.boolean  "approved"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "group"
   end
 
   add_index "endorsements", ["docid"], name: "index_endorsements_on_docid", unique: true, using: :btree
