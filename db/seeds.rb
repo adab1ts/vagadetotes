@@ -18,7 +18,8 @@ endorsements = [
     subscribed: true,
     hidden: false,
     featured: true,
-    approved: false
+    approved: false,
+    group: false
   },
   {
     name: "Carles",
@@ -30,9 +31,10 @@ endorsements = [
     postal_code: "08002",
     activity: "ICT",
     subscribed: false,
-    hidden: true,
+    hidden: false,
     featured: false,
-    approved: false
+    approved: false,
+    group: false
   },
   {
     name: "Klaudia",
@@ -46,7 +48,23 @@ endorsements = [
     subscribed: false,
     hidden: false,
     featured: true,
-    approved: false
+    approved: false,
+    group: false
+  },
+  {
+    name: "Col·lectiu 1871",
+    lastname: "",
+    doctype: "",
+    docid: "",
+    email: "c1871@acme.org",
+    birthdate: "",
+    postal_code: "08003",
+    activity: "Investigació social",
+    subscribed: true,
+    hidden: false,
+    featured: false,
+    approved: false,
+    group: true
   }
 ]
 
