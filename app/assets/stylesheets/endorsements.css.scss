@@ -71,7 +71,7 @@ a, a:hover {
 }
 
 #counter {
-  margin-top: 25px;
+  margin-top: 5px;
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif !important;
   span.number {
@@ -88,11 +88,14 @@ a, a:hover {
 }
 
 #twitter_feed {
-  margin-top: 70px;
-  text-align: center;
+  margin-top: 60px;
   span.feed_header {
     display: block !important;
     font-size: 17px !important;
+    font-weight: 700;
+  }
+  .twitter-timeline {
+    height: 470px;
   }
 }
 
