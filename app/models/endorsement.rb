@@ -36,8 +36,12 @@ class Endorsement < ActiveRecord::Base
   validates :activity, length: { maximum: 50 }
   
   before_save do |e|
-    e.activity = nil if e.activity.blank?
-    e.featured = 'f'
-    e.approved = 'f'
+    e.lastname  = nil if e.lastname.blank?
+    e.doctype   = nil if e.doctype.blank?
+    e.docid     = nil if e.docid.blank?
+    e.birthdate = nil if e.birthdate.blank?
+    e.activity  = nil if e.activity.blank?
+    e.featured  = 'f'
+    e.approved  = 'f'
   end
 end
