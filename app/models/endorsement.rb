@@ -13,13 +13,13 @@ class Endorsement < ActiveRecord::Base
   scope :approved,       -> { where(approved: true) }
   
   before_validation do |e|
-    e.name        = e.name.squish.downcase.scan(/[\d\p{L}\p{P}]+/).map{ |w| %w(i y de del la las lo los).include?(w) ? w : w.capitalize }.join(' ')
+    e.name        = e.name.squish.capitalize.scan(/[\d\p{L}\p{P}]+/).map{ |w| w =~ /\A(i|y|de|del|la|las|lo|los)\z/i ? w : w.capitalize }.join(' ')
     e.email       = e.email.squish.downcase
     e.postal_code = e.postal_code.squish
-    e.activity    = e.activity.squish.downcase.capitalize
+    e.activity    = e.activity.squish.capitalize
     
     unless e.group
-      e.lastname = e.lastname.squish.downcase.scan(/[\p{L}\p{P}]+/).map{ |w| %w(i y de del la las lo los).include?(w) ? w : w.capitalize }.join(' ')
+      e.lastname = e.lastname.squish.downcase.scan(/[\p{L}\p{P}]+/).map{ |w| w =~ /\A(i|y|de|del|la|las|lo|los)\z/i ? w : w.capitalize }.join(' ')
       e.doctype  = e.doctype.squish.downcase
       e.docid    = e.docid.remove(/[^\da-z]/i).upcase
     end
@@ -36,12 +36,18 @@ class Endorsement < ActiveRecord::Base
   validates :activity, length: { maximum: 50 }
   
   before_save do |e|
-    e.lastname  = nil if e.lastname.blank?
-    e.doctype   = nil if e.doctype.blank?
-    e.docid     = nil if e.docid.blank?
-    e.birthdate = nil if e.birthdate.blank?
+    if e.group
+      e.lastname  = e.name
+      e.doctype   = nil
+      e.docid     = nil
+      e.birthdate = nil
+    end
     e.activity  = nil if e.activity.blank?
     e.featured  = 'f'
     e.approved  = 'f'
+  end
+  
+  def full_name
+    self.group ? self.name : "#{name} #{lastname}"
   end
 end

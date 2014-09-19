@@ -8,7 +8,8 @@
         - @endorsements.each do |e|
           %tr
             %td= fa_stacked_icon('group inverse', base: 'circle', class: 'pull-left') if e.group
-            %td= "#{e.name} #{e.lastname}"
+            -#%td= "#{e.name} #{e.lastname}"
+            %td= e.full_name
             %td= e.activity
   
 %footer
