@@ -1,11 +1,13 @@
-#goto_endorsement
-  = link_to endorsements_path do
-    %img{src: "#{asset_path('endorsement_form_link.png')}", alt: t('.img_button.alt')}
+.row
+  #goto_endorsement.col-xs-7.col-sm-12.col-md-12
+    = link_to endorsements_path do
+      %img.img-responsive{src: "#{asset_path('endorsement_form_link.png')}", alt: t('.img_button.alt')}
     
-#counter
-  %span.number= @endorsements_counter
-  %span.subtext= t('.counter.subtext')
+  #counter.col-xs-5.col-sm-12.col-md-12
+    %span.number= @endorsements_counter
+    %span.subtext= t('.counter.subtext')
 
-#twitter_feed
-  %span.feed_header= t('.twitter_feed.header_text')
-  %a{class: 'twitter-timeline', href: 'https://twitter.com/hashtag/vagadetotes', data: {'widget-id' => '512554077364830209'}} #vagadetotes
+.row
+  #twitter_feed.col-md-12
+    %span.feed_header= t('.twitter_feed.header_text')
+    %a{class: 'twitter-timeline', href: 'https://twitter.com/hashtag/vagadetotes', data: {'widget-id' => '512554077364830209'}} #vagadetotes

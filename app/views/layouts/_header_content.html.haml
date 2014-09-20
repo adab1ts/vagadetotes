@@ -1,8 +1,9 @@
 .container
   .row
-    .col-md-10.col-md-offset-1.banner
-      %img{src: "#{asset_path('vagadetotes_banner.png')}", alt: t('.header.banner.img_alt')}
+    .col-md-10.col-md-offset-1
+      %img.img-responsive.banner{src: "#{asset_path('vagadetotes_banner.png')}", alt: t('.header.banner.img_alt')}
 
   .row
-    .col-md-12.ribbon
-      %h1= t('.header.ribbon.text')
+    .col-md-12
+      .ribbon
+        %p= t('.header.ribbon.text')
