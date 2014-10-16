@@ -13,12 +13,12 @@ class Endorsement < ActiveRecord::Base
   scope :approved,       -> { where(approved: true) }
   
   before_validation do |e|
-    e.name        = e.name.squish.capitalize.scan(/[\d\p{L}\p{P}]+/).map{ |w| w =~ /\A(i|y|de|del|la|las|lo|los)\z/i ? w : w.capitalize }.join(' ')
     e.email       = e.email.squish.downcase
     e.postal_code = e.postal_code.squish
     e.activity    = e.activity.squish.capitalize
     
     unless e.group
+      e.name     = e.name.squish.capitalize.scan(/[\d\p{L}\p{P}]+/).map{ |w| w =~ /\A(i|y|de|del|la|las|lo|los)\z/i ? w : w.capitalize }.join(' ')
       e.lastname = e.lastname.squish.downcase.scan(/[\p{L}\p{P}]+/).map{ |w| w =~ /\A(i|y|de|del|la|las|lo|los)\z/i ? w : w.capitalize }.join(' ')
       e.doctype  = e.doctype.squish.downcase
       e.docid    = e.docid.remove(/[^\da-z]/i).upcase
