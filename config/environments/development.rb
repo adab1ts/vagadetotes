@@ -36,5 +36,10 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   
   # Available locales
-  config.i18n.available_locales = [:ca, :es, :en]
+  config.i18n.available_locales = [:ca, :es, :en, :fr, :gl]
+  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+  # the I18n.default_locale when a translation cannot be found).  
+  config.i18n.fallbacks = true
+  # Skip validation of your locale
+  config.i18n.enforce_available_locales = false
 end

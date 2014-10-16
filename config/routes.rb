@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :endorsements, only: [:index, :create]
-  get 'manifesto' => 'endorsements#manifesto', as: :manifesto
-  
+  #scope "/:locale" do
+  #scope "(:locale)", locale: /ca|es|en|fr|gl/ do
+  scope "(:locale)" do
+    resources :endorsements, only: [:index, :create]
+    get 'manifesto' => 'endorsements#manifesto', as: :manifesto
+  end
+
+  get "/:locale" => 'endorsements#manifesto'
   root 'endorsements#manifesto'
 
   # The priority is based upon order of creation: first created -> highest priority.
