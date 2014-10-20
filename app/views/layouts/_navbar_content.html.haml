@@ -1,0 +1,36 @@
+- h = { ca: 'none', es: 'none', gl: 'none', fr: 'none', en: 'none' }
+- h[locale] = 'active'
+.container
+  .navbar.navbar-default
+    .container-fluid
+      .navbar-header
+        %ul
+          %li
+            = link_to 'https://vagadetotes.wordpress.com', class: 'social-wp', target: '_blank' do
+              %i.fa.fa-wordpress.fa-2x.fa-fw
+          %li
+            = link_to 'https://www.facebook.com/lavagadetotes', class: 'social-fb', target: '_blank' do
+              %i.fa.fa-facebook-square.fa-2x.fa-fw
+          %li
+            = link_to 'https://twitter.com/vagadetotes', class: 'social-tw', target: '_blank' do
+              %i.fa.fa-twitter-square.fa-2x.fa-fw
+
+        %button.navbar-toggle.collapsed{type: 'button', data: {toggle: 'collapse', target: '.navbar-collapse'}}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+          
+      .navbar-collapse.collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li{class: "#{h[:ca]}"}
+            = link_to 'Català', "/ca"
+          -#%li{class: "#{h[:es]}"}
+            -#= link_to 'Castellano', "/es"
+          -#%li{class: "#{h[:gl]}"}
+            -#= link_to 'Galego', "/gl"
+          -#%li{class: "#{h[:fr]}"}
+            -#= link_to 'Français', "/fr"
+          -#%li{class: "#{h[:en]}"}
+            -#= link_to 'English', "/en"
+          

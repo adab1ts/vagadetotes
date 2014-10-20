@@ -11,6 +11,37 @@ a, a:hover {
   text-decoration: none !important;
 }
 
+.navbar-default {
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-nav .active a {
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.navbar-header {
+  ul {
+    float: left;
+    list-style: none;
+    margin: 5px 0 0 10px;
+    padding: 0;
+    li {
+      display: inline-block;
+      a.social-wp:hover { color: #21759b; }
+      a.social-fb:hover { color: #3b5999; }
+      a.social-tw:hover { color: #55acee; }
+    }
+  }
+}
+@media only screen and (min-width: $screen-sm-min) {
+  .navbar-header ul {
+    margin: 5px 0 0;
+  }
+}
+
 .banner {
   display: block !important;
   margin: auto !important;

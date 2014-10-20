@@ -22,7 +22,7 @@ ca:
           individuals: 'Persones'
           groups: 'Col·lectius'
         individuals:
-          subscribe_text: 'Vull rebre informació sobre la Vaga de totes.'
+          subscribe_text: 'Vull rebre informació sobre la Vaga de Totes.'
           hide_text: 'No vull que el meu nom aparegui públicament a la web.'
           submit:
             img_alt: 'Signa'

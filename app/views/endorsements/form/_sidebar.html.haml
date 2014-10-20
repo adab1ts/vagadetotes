@@ -1,7 +1,7 @@
 .row
   #goto_manifesto.col-xs-7.col-sm-12.col-md-12
     = link_to manifesto_path do
-      %img.img-responsive{src: "#{asset_path('manifesto_link.png')}", alt: t('.img_button.alt')}
+      %img.img-responsive{src: "#{asset_path(File.join(locale.to_s, 'manifesto_link.png'))}", alt: t('.img_button.alt')}
     
   #counter.col-xs-5.col-sm-12.col-md-12
     %span.number= @endorsements_counter

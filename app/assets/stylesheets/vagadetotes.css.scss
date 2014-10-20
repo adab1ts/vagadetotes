@@ -5,6 +5,14 @@
 // Twitter Bootstrap
 $brand-primary: #663399;
 $nav-pills-border-radius: 15px;
+$navbar-height: 40px;
+$navbar-border-radius: 0;
+$navbar-default-link-color: #663399;
+$navbar-default-link-hover-color: #402060;
+$navbar-default-link-hover-bg: #eee;
+$navbar-default-link-active-color: #fff;
+$navbar-default-link-active-bg: #663399;
+$nav-link-padding: 10px 10px;
 
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
