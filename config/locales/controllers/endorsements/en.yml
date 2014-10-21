@@ -1,0 +1,4 @@
+en:
+  endorsements:
+    valid_endorsement: 'Your signature has been registered. Thanks for your support!'
+    invalid_endorsement: 'Some of the data entered is not valid. Please check and try again.'

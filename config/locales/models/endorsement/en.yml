@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    models:
+      endorsement:
+        one: 'Support'
+        other: 'Supports'
+    attributes:
+      endorsement:
+        name: 'Name'
+        lastname: 'Last name'
+        doctype: 'ID'
+        email: 'E-mail'
+        birthdate: 'Date of birth'
+        postal_code: 'Postal code'
+        activity: 'Activity'

@@ -1,0 +1,8 @@
+en:
+  layouts:
+    header_content:
+      header:
+        banner:
+          img_alt: 'banner vagadetotes'
+        ribbon:
+          text: 'Manifesto of #vagadetotes'

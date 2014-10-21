@@ -1,0 +1,36 @@
+en:
+  endorsements:
+    manifesto:
+      sidebar:
+        img_button:
+          alt: 'Sign here'
+        counter:
+          subtext: 'Supporters'
+        twitter_feed:
+          header_text: 'Follow us on Twitter'
+    form:
+      sidebar:
+        img_button:
+          alt: 'Back to manifesto'
+        counter:
+          subtext: 'Supporters'
+        twitter_feed:
+          header_text: 'Follow us on twitter'
+      content:
+        forms:
+          title: 'Sign form'
+          individuals: 'Individuals'
+          groups: 'Groups'
+        individuals:
+          subscribe_text: 'Please keep me informed on Vaga de Totes.'
+          hide_text: "I don't want my name published on the web."
+          submit:
+            img_alt: 'Sign here'
+        groups:
+          activity_hint: 'ex: Health, Leisure, Debt, etc.'
+          subscribe_text: 'Please keep me informed on Vaga de totes.'
+          hide_text: "I don't want my name published on the web."
+          submit:
+            img_alt: 'Sign here'
+        list:
+          title: 'Public list of supporters'
