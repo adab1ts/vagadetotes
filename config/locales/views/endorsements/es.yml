@@ -1,0 +1,36 @@
+es:
+  endorsements:
+    manifesto:
+      sidebar:
+        img_button:
+          alt: 'firmar aquí'
+        counter:
+          subtext: 'adhesiones'
+        twitter_feed:
+          header_text: 'Síguenos en Twitter'
+    form:
+      sidebar:
+        img_button:
+          alt: 'volver al manifiesto'
+        counter:
+          subtext: 'adhesiones'
+        twitter_feed:
+          header_text: 'Síguenos en Twitter'
+      content:
+        forms:
+          title: "Formulario de adhesión"
+          individuals: 'Personas'
+          groups: 'Colectivos'
+        individuals:
+          subscribe_text: 'Quiero recibir información sobre la Vaga de Totes.'
+          hide_text: 'No quiero que mi nombre aparezca públicamente en la web.'
+          submit:
+            img_alt: 'Firmar'
+        groups:
+          activity_hint: 'ej: Sanidad, Ocio, Deuda, etc.'
+          subscribe_text: 'Quiero recibir información sobre la Vaga de totes.'
+          hide_text: 'No quiero que mi nombre aparezca públicamente en la web.'
+          submit:
+            img_alt: 'Firmar'
+        list:
+          title: "Lista pública de adhesiones"

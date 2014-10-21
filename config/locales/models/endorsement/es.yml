@@ -1,0 +1,15 @@
+es:
+  activerecord:
+    models:
+      endorsement:
+        one: 'Adhesión'
+        other: 'Adhesiones'
+    attributes:
+      endorsement:
+        name: 'Nombre'
+        lastname: 'Apellidos'
+        doctype: 'Identificador'
+        email: 'Correo electrónico'
+        birthdate: 'Fecha de nacimiento'
+        postal_code: 'Código postal'
+        activity: 'Actividad'

@@ -1,0 +1,33 @@
+es:
+  simple_form:
+    "yes": 'Sí'
+    "no": 'No'
+    required:
+      text: 'obligatorio'
+      mark: '*'
+    error_notification:
+      default_message: "Revisa los datos incorrectos:"
+    labels:
+      endorsement:
+        name: 'Nombre'
+        lastname: '* Apellidos'
+        doctype: '* Identificador'
+        email: 'Correo electrónico'
+        birthdate: '* Fecha de nacimiento'
+        postal_code: 'Código postal'
+        activity: 'Actividad'
+    hints:
+      endorsement:
+        docid: 'Este campo permanecerá oculto.'
+    placeholders:
+      endorsement:
+        docid: 'ej: 12345678Z'
+    prompts:
+      endorsement:
+        doctype: 'documento'
+    options:
+      endorsement:
+        doctype:
+          dni: 'DNI'
+          nie: 'NIE'
+          passport: 'Pasaporte'
