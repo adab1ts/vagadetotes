@@ -7,10 +7,12 @@ class Endorsement < ActiveRecord::Base
   scope :individuals,    -> { where(group: false) }
   scope :groups,         -> { where(group: true) }
   scope :subscribed,     -> { where(subscribed: true) }
+  scope :not_subscribed, -> { where(subscribed: false) }
   scope :hidden,         -> { where(hidden: true) }
   scope :visible,        -> { where(hidden: false) }
   scope :featured,       -> { where(featured: true) }
   scope :approved,       -> { where(approved: true) }
+  scope :rejected,       -> { where(approved: false) }
   
   before_validation do |e|
     e.email       = e.email.squish.downcase
@@ -35,7 +37,7 @@ class Endorsement < ActiveRecord::Base
   validates :postal_code, presence: true, format: { with: /\A([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}\z/ }
   validates :activity, length: { maximum: 50 }
   
-  before_save do |e|
+  before_create do |e|
     if e.group
       e.lastname  = e.name
       e.doctype   = nil

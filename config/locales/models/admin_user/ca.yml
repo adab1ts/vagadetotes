@@ -1,0 +1,6 @@
+ca:
+  activerecord:
+    models:
+      admin_user:
+        one: 'Administradora'
+        other: 'Administradores'

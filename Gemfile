@@ -29,6 +29,10 @@ gem 'bootstrap-will_paginate'
 gem 'simple_form', '~> 3.1.0.rc2', github: 'plataformatec/simple_form', branch: 'master'
 gem 'spanish_vat_validators', '~> 0.0.3'
 
+gem 'devise', '~> 3.4.0'
+gem 'devise-i18n', '~> 0.11.2'
+gem 'activeadmin', github: 'activeadmin/activeadmin', branch: 'master'
+
 gem 'haml-rails', group: :development
 gem 'rspec-rails', '~> 3.1.0', group: [:development, :test]
 

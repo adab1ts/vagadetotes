@@ -1,0 +1,125 @@
+#encoding: utf-8
+ca:
+  active_admin:
+    dashboard: Tauler
+    dashboard_welcome:
+      welcome: "Benvinguda a Active Admin. Aquest és el tauler per defecte."
+      call_to_action: "Mira l'arxiu 'app/admin/dashboard.rb' per afegir seccions al tauler"
+    view: "Mostra"
+    edit: "Edita"
+    delete: "Elimina"
+    delete_confirmation: "Estàs segura que vols eliminar-ho?"
+    new_model: "Crear %{model}"
+    edit_model: "Editar %{model}"
+    delete_model: "Eliminar %{model}"
+    details: "Detalls de %{model}"
+    cancel: "Cancel·lar"
+    empty: "Buit"
+    previous: "Anterior"
+    next: "Següent"
+    download: "Descarregar:"
+    has_many_new: "Afegir %{model}"
+    has_many_delete: "Eliminar"
+    has_many_remove: "Treure"
+    filters:
+      buttons:
+        filter: "Filtrar"
+        clear: "Treure filtres"
+      predicates:
+        contains: "Conté"
+        equals: "Igual a"
+        starts_with: "Comença amb"
+        ends_with: "Acaba amb"
+        greater_than: "Més gran que"
+        less_than: "Més petit que"
+    status_tag:
+      "yes": "Sí"
+      "no": "No"
+    main_content: "Implementa %{model}#main_content per mostrar contingut."
+    logout: "Desconnecta't"
+    powered_by: "Powered by %{active_admin} %{version}"
+    sidebars:
+      filters: "Filtres"
+    pagination:
+      empty: "No hi ha %{model}"
+      one: "S'està mostrant <b>1</b> %{model}"
+      one_page: "S'estan mostrant <b>tots %{n}</b> %{model}"
+      multiple: "S'estan mostrant %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b>%{total}</b> en total"
+      multiple_without_total: "S'estan mostrant %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b>"
+      entry:
+        one: "entrada"
+        other: "entrades"
+    any: "Qualsevol"
+    blank_slate:
+      content: "Encara no hi ha cap %{resource_name}."
+      link: "Crea'n un/a"
+    dropdown_actions:
+      button_label: "accions"
+    batch_actions:
+      button_label: "accions per lots"
+      default_confirmation: "¿Estàs segura que vols fer-ho?"
+      default_success: "L'acció per lots ha estat realitzada amb èxit"
+      selection_toggle_explanation: "(Selecció de Canviar)"
+      link: "crear una"
+      action_label: "%{title}"
+      labels:
+        approve: "validar"
+        destroy: "esborrar"
+        feature: "destacar"
+    comments:
+      resource_type: "Tipus de recurs"
+      author_type: "Tipus d'autor"
+      body: "Cos"
+      author: "autor"
+      title: "comentari"
+      add: "Afegeix comentari"
+      resource: "Recurs"
+      no_comments_yet: "No hi ha comentaris"
+      author_missing: "Anònim"
+      title_content: "comentaris (%{count})"
+      errors:
+        empty_text: "El comentari no es va salvar, el text estava buit."
+    devise:
+      username:
+        title: "Nom d'usuari"
+      email:
+        title: "Correu electrònic"
+      subdomain:
+        title: "Subdomini"
+      password:
+        title: "Contrasenya"
+      sign_up:
+        title: "Registre"
+        submit: "Registrar-se"
+      login:
+        title: "Iniciar sessió"
+        remember_me: "Recordar"
+        submit: "Iniciar sessió"
+      reset_password:
+        title: "Heu perdut la contrasenya?"
+        submit: "Restablir la contrasenya"
+      change_password:
+        title: "Canvieu la contrasenya"
+        submit: "Canviar la contrasenya"
+      unlock:
+        title: "Reenvia instruccions per a desbloquejar"
+        submit: "Reenvia instruccions per a desbloquejar"
+      resend_confirmation_instructions:
+        title: "Reenviar instruccions de confirmació"
+        submit: "Reenviar instruccions de confirmació"
+      links:
+        sign_in: "Registrar"
+        forgot_your_password: "Heu perdut la contrasenya?"
+        sign_in_with_omniauth_provider: "Connecta't amb %{provider}"
+        resend_unlock_instructions: "Reenviament d'instruccions de desbloqueig"
+    unsupported_browser:
+      headline: "Tingueu en compte que ActiveAdmin ja no admet les versions d'Internet Explorer 8 o inferiors."
+      recommendation: "Recomanem actualitzar a la darrera versió de <a href=\"http://windows.microsoft.com/ie\">Internet Explorer</a>, <a href=\"https://chrome.google.com/\">Google Chrome</a>, o <a href=\"https://mozilla.org/firefox/\">Firefox</a>."
+      turn_off_compatibility_view: "Si feu servir IE 9 o posterior, assegureu-vos de <a href=\"http://windows.microsoft.com/en-US/windows7/webpages-look-incorrect-in-Internet-Explorer\">deshabilitar la \"Vista de Compatibilitat\"</a>."
+    access_denied:
+      message: "No està autoritzat a realitzar aquesta acció."
+    index_list:
+      table: "Taula"
+      block: "Llista"
+      grid: "Graella"
+      blog: "Bloc"
