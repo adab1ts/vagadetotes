@@ -42,7 +42,8 @@ ActiveAdmin.register Endorsement do
     end
     redirect_to collection_path, notice: I18n.t('active_admin.batch_actions.default_success')
   end
-  
+
+  scope "Totes", :all, default: true
   scope "Persones", :individuals
   scope "Grups", :groups
   scope "Visibles", :visible
@@ -56,6 +57,7 @@ ActiveAdmin.register Endorsement do
   index do
     selectable_column
     id_column
+    column :group
     column :full_name, sortable: [:lastname, :name]
     column :doctype
     column :docid
@@ -63,7 +65,6 @@ ActiveAdmin.register Endorsement do
     column :birthdate
     column :postal_code
     column :activity
-    column :group
     column :subscribed
     column :hidden
     column :featured
@@ -79,6 +80,7 @@ ActiveAdmin.register Endorsement do
 
   csv do
     column :id
+    column :group
     column :full_name
     column :doctype
     column :docid
@@ -86,7 +88,6 @@ ActiveAdmin.register Endorsement do
     column :birthdate
     column :postal_code
     column :activity
-    column :group
     column :subscribed
     column :hidden
     column :featured
